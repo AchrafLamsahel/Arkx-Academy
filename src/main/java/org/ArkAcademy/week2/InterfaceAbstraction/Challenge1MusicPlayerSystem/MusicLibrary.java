@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MusicLibrary {
-    private List<Playable> tracks = new ArrayList<>();
+    private ArrayList<Playable> tracks = new ArrayList<>();
 
     public List<Playable> getMusics(){
         return List.of(new Playable() {
