@@ -13,24 +13,19 @@ public class BankAccount {
         this.pin = pin;
         this.balance = balance;
     }
-
     public String getAccountNumber() {
         return accountNumber;
     }
-
     public boolean verifyPin(int enteredPin) {
         return pin == enteredPin;
     }
-
     public double getBalance() {
         return balance;
     }
-
     public void deposit(double amount) {
         balance += amount;
         transactionHistory.add(new Transaction("DEPOSIT", amount));
     }
-
     public boolean withdraw(double amount) {
         if (amount <= balance) {
             balance -= amount;

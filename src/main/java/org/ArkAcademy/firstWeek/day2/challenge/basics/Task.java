@@ -1,4 +1,4 @@
-package day2.challenge.basics;
+package org.ArkAcademy.firstWeek.day2.challenge.basics;
 
 public class Task {
     public static void main(String[] args) {

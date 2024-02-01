@@ -8,7 +8,6 @@ public class Task4 {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a number: ");
         double number = scanner.nextDouble();
-
         if (number > 0) {
             System.out.println("Positive.");
         } else if (number < 0) {

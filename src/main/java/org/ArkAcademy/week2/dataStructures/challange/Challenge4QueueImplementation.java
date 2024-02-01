@@ -1,5 +1,6 @@
 package org.ArkAcademy.week2.dataStructures.challange;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Challenge4QueueImplementation {
@@ -21,7 +22,8 @@ public class Challenge4QueueImplementation {
         System.out.println("Is queue empty? " + queue.isEmpty());
     }
 }
- class BasicQueue {
+
+class BasicQueue {
     private ArrayList<Integer> queueList;
 
     public BasicQueue() {

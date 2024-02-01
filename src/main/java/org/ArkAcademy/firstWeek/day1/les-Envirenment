@@ -1,2 +1,7 @@
-* Install JDK - 17
+* System : Linux Debian 12
+* Install JDK - 17 + 11 + 8
 * Intellij-idea -2023
+* MySql Server + MySQL WorkBench
+* MongoDB + MongoDB Compass(GUI)
+* Idea VS-Code
+* Maven

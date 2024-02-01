@@ -1,4 +1,4 @@
-package day3.challenge.basics;
+package org.ArkAcademy.firstWeek.day3.challenge.basics;
 
 import java.util.Scanner;
 

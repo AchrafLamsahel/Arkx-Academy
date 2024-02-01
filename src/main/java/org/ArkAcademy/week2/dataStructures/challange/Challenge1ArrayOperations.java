@@ -9,7 +9,9 @@ public class Challenge1ArrayOperations {
         System.out.println(" Max : " + maxOfArray(numbers));
         System.out.println(" Min : " + minOfArray(numbers));
         System.out.println(" Reverse : " + Arrays.toString(revertArray(numbers)));
+        System.out.println(" find : " + binarySearch(numbers, -1)); // Binary Search
         // On peux Utiliser Les Stream
+        //Arrays.stream(numbers).max() .....
     }
 
     private static int maxOfArray(int[] array) {
@@ -52,11 +54,29 @@ public class Challenge1ArrayOperations {
 
     private static int[] revertArray(int[] array) {
         int low = 0;
-        int high = array.length-1;
-        int[]  reverseArray = new int[array.length];
-        for(int i = 0; i <= high; i++) {
-            reverseArray[i]=array[high-i];
+        int high = array.length - 1;
+        int[] reverseArray = new int[array.length];
+        for (int i = 0; i <= high; i++) {
+            reverseArray[i] = array[high - i];
         }
         return reverseArray;
+    }
+    // Binary Search
+    private static int binarySearch(int[] array, int numberToFount) {
+        int low = 0;
+        int high = array.length - 1;
+        while (low <= high) {
+            int middlePossition = (low + high) / 2;
+            int middleNumber = array[middlePossition];
+            if (numberToFount == middleNumber) {
+                return middlePossition;
+            }
+            if (numberToFount < middleNumber) {
+                high = middlePossition - 1;
+            } else {
+                low = middlePossition + 1;
+            }
+        }
+        return -1;
     }
 }

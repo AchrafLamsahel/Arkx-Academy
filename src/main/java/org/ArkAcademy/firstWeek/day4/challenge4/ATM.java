@@ -6,40 +6,30 @@ import java.util.Scanner;
 
 public class ATM {
     private Map<String, BankAccount> accounts;
-
     public ATM() {
         this.accounts = new HashMap<>();
     }
-
     public void addAccount(BankAccount account) {
         accounts.put(account.getAccountNumber(), account);
     }
-
     public void start() {
         Scanner scanner = new Scanner(System.in);
-
         System.out.println("Welcome to the ATM!");
-
         while (true) {
             System.out.print("Enter your account number: ");
             String accountNumber = scanner.nextLine();
-
             if (!accounts.containsKey(accountNumber)) {
                 System.out.println("Account not found. Please try again.");
                 continue;
             }
-
             System.out.print("Enter your PIN: ");
             int enteredPin = scanner.nextInt();
-
             BankAccount currentAccount = accounts.get(accountNumber);
             if (!currentAccount.verifyPin(enteredPin)) {
                 System.out.println("Incorrect PIN. Please try again.");
                 continue;
             }
-
             displayMenu();
-
             int choice;
             try {
                 choice = scanner.nextInt();
@@ -47,7 +37,6 @@ public class ATM {
                 System.out.println("Invalid input. Please enter a number.");
                 continue;
             }
-
             switch (choice) {
                 case 1:
                     System.out.println("Balance: $ :" + currentAccount.getBalance());

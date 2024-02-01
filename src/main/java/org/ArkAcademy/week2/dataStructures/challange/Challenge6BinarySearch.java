@@ -5,19 +5,15 @@ import static org.ArkAcademy.week2.dataStructures.challange.BinarySearch.binaryS
 public class Challenge6BinarySearch {
     public static void main(String[] args) {
         int[] sortedArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-
         int targetElement = 5;
         int result = binarySearch(sortedArray, targetElement);
-
         if (result != -1) {
             System.out.println("Element " + targetElement + " found at index " + result);
         } else {
             System.out.println("Element " + targetElement + " not found in the array.");
         }
-
         int nonExistentElement = 15;
         int resultNotFound = binarySearch(sortedArray, nonExistentElement);
-
         if (resultNotFound != -1) {
             System.out.println("Element " + nonExistentElement + " found at index " + resultNotFound);
         } else {
@@ -42,7 +38,6 @@ class BinarySearch {
                 right = mid - 1;
             }
         }
-
         return -1;
     }
 }

@@ -1,11 +1,11 @@
 package org.ArkAcademy.week2.dataStructures.challange;
 
+import java.util.Stack;
+
 public class Challenge3StackImplementation {
     public static void main(String[] args) {
         SimpleStack stack = new SimpleStack();
-
         System.out.println("Is stack empty? " + stack.isEmpty());
-
         stack.push(10);
         stack.push(20);
         stack.push(30);

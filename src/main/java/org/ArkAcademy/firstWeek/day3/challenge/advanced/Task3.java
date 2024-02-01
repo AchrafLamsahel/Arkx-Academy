@@ -1,4 +1,4 @@
-package day3.challenge.advanced;
+package org.ArkAcademy.firstWeek.day3.challenge.advanced;
 
 import java.util.Scanner;
 
@@ -6,7 +6,6 @@ public class Task3 {
     public static void main(String[] args) {
         // Challenge 3: Multiplication Table with While Loop
         Scanner scanner = new Scanner(System.in);
-
         System.out.print("Enter a number: ");
         int number = scanner.nextInt();
         int counter = 1;
@@ -16,7 +15,6 @@ public class Task3 {
             System.out.println(number + " * " + counter + " = " + result);
             counter++;
         }
-
     }
 }
 

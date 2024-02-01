@@ -8,7 +8,6 @@ public class Task5 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Entre char :");
         char ch = scanner.next().charAt(0);
-
         switch (ch) {
             case 'a':
             case 'e':

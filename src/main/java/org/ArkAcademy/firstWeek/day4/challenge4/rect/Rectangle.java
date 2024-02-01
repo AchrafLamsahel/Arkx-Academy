@@ -1,4 +1,4 @@
-package day4.challenge4.rect;
+package org.ArkAcademy.firstWeek.day4.challenge4.rect;
 
 public class Rectangle {
     private double length;
@@ -9,11 +9,9 @@ public class Rectangle {
         this.length = length;
         this.width = width;
     }
-
     public double calculateArea() {
         return length * width;
     }
-
     public void displayInfo() {
         System.out.println("Rectangle Dimensions - Length: " + length + ", Width: " + width);
         System.out.println("Area: " + calculateArea());

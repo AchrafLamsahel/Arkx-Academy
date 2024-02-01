@@ -4,42 +4,33 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MusicLibrary {
-    private ArrayList<Playable> tracks = new ArrayList<>();
+    private Playable currentTrack;
 
-    public List<Playable> getMusics(){
-        return List.of(new Playable() {
-            @Override
-            public void play() {
-                System.out.println("hey");
-            }
-
-            @Override
-            public void pause() {
-                System.out.println("Achraf");
-            }
-
-            @Override
-            public void stop() {
-                System.out.println("LAMSAHEL");
-            }
-        });
+    public void setTrack(Playable track) {
+        this.currentTrack = track;
     }
 
-
-    public void addTrack(Playable track) {
-        tracks.add(track);
+    public void playTrack() {
+        if (currentTrack != null) {
+            currentTrack.play();
+        } else {
+            System.out.println("No track selected.");
+        }
     }
 
-    public void playTrack(Playable track) {
-        track.play();
+    public void pauseTrack() {
+        if (currentTrack != null) {
+            currentTrack.pause();
+        } else {
+            System.out.println("No track selected.");
+        }
     }
 
-    public void pauseTrack(Playable track) {
-        track.pause();
+    public void stopTrack() {
+        if (currentTrack != null) {
+            currentTrack.stop();
+        } else {
+            System.out.println("No track selected.");
+        }
     }
-
-    public void stopTrack(Playable track) {
-        track.stop();
-    }
-
 }

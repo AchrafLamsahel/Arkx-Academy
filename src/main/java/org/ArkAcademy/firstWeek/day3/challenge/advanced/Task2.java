@@ -1,4 +1,4 @@
-package day3.challenge.advanced;
+package org.ArkAcademy.firstWeek.day3.challenge.advanced;
 
 import java.util.Scanner;
 
@@ -35,7 +35,6 @@ public class Task2 {
                 System.out.println("Invalid input. Please enter a number between 1 and 7.");
                 return;
         }
-
         System.out.println("The corresponding day is: " + dayName);
 
     }
