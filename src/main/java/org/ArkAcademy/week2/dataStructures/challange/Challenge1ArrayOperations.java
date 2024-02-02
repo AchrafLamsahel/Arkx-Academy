@@ -4,14 +4,15 @@ import java.util.Arrays;
 
 public class Challenge1ArrayOperations {
     public static void main(String[] args) {
-        int[] numbers = {1, -1, 6, 87, 89, 4, 129, 7};
-        System.out.println("Somme : " + sumOfArray(numbers));
-        System.out.println(" Max : " + maxOfArray(numbers));
-        System.out.println(" Min : " + minOfArray(numbers));
-        System.out.println(" Reverse : " + Arrays.toString(revertArray(numbers)));
-        System.out.println(" find : " + binarySearch(numbers, -1)); // Binary Search
+        int[] numbers = { 1 , -1 , 6 , 87 , 89 , 4 , 129 , 7 , 11 };
+        System.out.println("Somme Of Array : " + sumOfArray(numbers));
+        System.out.println(" Max Of Array  : " + maxOfArray(numbers));
+        System.out.println(" Min Of Array  : " + minOfArray(numbers));
+        System.out.println(" 1ére Methode  : Reverse ==> " + Arrays.toString(revertArray(numbers)));
+        System.out.println(" find Elements from Array : " + binarySearch(numbers, -1)); // Binary Search
+        System.out.println(" 2éme Methode  : Reverse ==> " + Arrays.toString(reverseArray(numbers)));
         // On peux Utiliser Les Stream
-        //Arrays.stream(numbers).max() .....
+        //Arrays.stream(numbers).max() , min() , sum() .....
     }
 
     private static int maxOfArray(int[] array) {
@@ -52,15 +53,6 @@ public class Challenge1ArrayOperations {
         return somme;
     }
 
-    private static int[] revertArray(int[] array) {
-        int low = 0;
-        int high = array.length - 1;
-        int[] reverseArray = new int[array.length];
-        for (int i = 0; i <= high; i++) {
-            reverseArray[i] = array[high - i];
-        }
-        return reverseArray;
-    }
     // Binary Search
     private static int binarySearch(int[] array, int numberToFount) {
         int low = 0;
@@ -79,4 +71,27 @@ public class Challenge1ArrayOperations {
         }
         return -1;
     }
+
+    // 1 Methode
+    private static int[] revertArray(int[] array) {
+        int low = 0;
+        int high = array.length - 1;
+        int[] reverseArray = new int[array.length];
+        for (int i = 0; i <= high; i++) {
+            reverseArray[i] = array[high - i];
+        }
+        return reverseArray;
+    }
+
+    // 2 Methode
+    private static int[] reverseArray(int[] array) {
+        int t;
+        for (int i = 0; i < array.length / 2; i++) {
+            t = array[i];
+            array[i] = array[array.length - i - 1];
+            array[array.length - i - 1] = t;
+        }
+        return array;
+    }
+
 }

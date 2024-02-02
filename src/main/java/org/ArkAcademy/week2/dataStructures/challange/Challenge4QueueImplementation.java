@@ -1,10 +1,10 @@
 package org.ArkAcademy.week2.dataStructures.challange;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class Challenge4QueueImplementation {
     public static void main(String[] args) {
+
         BasicQueue queue = new BasicQueue();
 
         System.out.println("Is queue empty? " + queue.isEmpty());

@@ -22,3 +22,4 @@ public class Car extends Vehicle {
         System.out.println("Number of Seats: " + numSeats);
     }
 }
+
