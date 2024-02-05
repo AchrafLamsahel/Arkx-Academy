@@ -9,12 +9,11 @@ public class Challenge3StackImplementation {
         stack.push(10);
         stack.push(20);
         stack.push(30);
-
         stack.peek();
-
+        System.out.println(stack.peek());
         stack.pop();
         stack.pop();
-
+        System.out.println(stack);
         System.out.println("Is stack empty? " + stack.isEmpty());
 
     }
