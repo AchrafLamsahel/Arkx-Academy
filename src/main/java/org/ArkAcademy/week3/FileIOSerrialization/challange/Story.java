@@ -27,6 +27,7 @@ public class Story {
     public void loadProgress(String fileName) {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(fileName))) {
             sentences = (List<Sentence>) ois.readObject();
+            sentences.forEach(System.out::println);
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }

@@ -10,4 +10,12 @@ public class Sentence implements Serializable {
         this.text = text;
         this.author = author;
     }
+
+    @Override
+    public String toString() {
+        return "Sentence{" +
+                "text='" + text + '\'' +
+                ", author='" + author + '\'' +
+                '}';
+    }
 }
